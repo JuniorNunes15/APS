@@ -1,0 +1,30 @@
+Algumas informações extras sobre a atividade:
+
+Da Classe RevendaComArray:
+Na classe eu acabei fazendo algumas modificações, para facilitar o uso em alguns metodos. Como adicionar 1 novo metodo e 2 novos variaveis, sendo ela: 
+	- Um int chamado maxIndice, que guardava o número total de produtos que ia ser possivel guardar no vetor.
+	- E um boleano chamado find, que é utilixado para verificar se foi feita alterações em alguns momentos do programa. Nos metodos, 
+	comprar e vender, ele tem a função de apenas mudar para true, caso o metodo tenha entrado no if, dentro do for, e mudado o valor
+	da QtdEmEstoque(no caso de comprar ele adiciona na QtdEmEstoque e no caso de veder ele diminue QtdEmEstoque do produto).
+	E esse boleano find também é utilizado no metodo procuraindice, que quando encontra o produto que eu quero, ele seta o find para true, que no final
+	é utilizado na main. Find também possui um get chamado isFind(que foi gerado pelo proprio comando de get e set do eclipse), para ser utilizado na main.
+	- Metodo procuraIndice, foi um metodo eu criei apenas para ajudar na main, com os as opções de 6 até a 10 do menu, onde ele procura o produto com o 
+	mesmo codigo passado pelo usuário e retorna o produto. Se tiver encontrado o produto desejado, retorna ele e seta find como true, caso não encontre
+	o produto, ele retorna o primeiro produto, mas como find não foi alterado, na main ele acaba não sendo usado e apenas mostra a mensagem de erro.
+
+Na classe Main:
+Eu acabei usei um scanner para poder escrever no programa, e tambem adicionei alguns metodos e novas variaveis auxiliares:
+	- Um int chamado op, para fazer as operações de escolha do menu.
+	- 2 variáveis x e y, para receber algumas oque é escrito pelo scanner e ser mandado para os metodos. Como nos metodos de comprar e vender das opções 2 e 3
+	do menu, que pega o x e o y para mandar nesses metodos. Também é utilizado nas opções 6, 8 e 10, com o mesmo objetivo, onde normalmente o x é utilizado
+	para pegar o produto passado pelo procurar índice e depois o y é utilizado para as outras funções de mudar os valores. E o x também é utilizado para apenas
+	pegar os produtos das opções 7 e 9 do menu.
+	- Uma variável double chamada preco criada na opção 5 do menu, que possui a função de guardar o valor retornado pela função consultarPrecoVenda e poder 
+	mostrar esse valor para o usuario.
+	- Um produto chamado aux para auxiliar nas opções de 6 até a 10 do menu, que tem apenas a função de receber o valor que é retornado do metodo de procuraIndice.
+	- Um novo metodo chamado printOpcoes, criado na main apenas para printar as opções do menu que podem ser feitas, criado apenas para deixar a parte principal 
+	da main mais legível.
+	- A partir das opções 6 até a 10 do menu possui uma estrutura bastante similar, onde procura o produto relacionado com o valor passado pelo usuario no x, e 
+	caso tiver encontrado o valor, ele faz as ações do if, mas caso não tiver encontrado ele faz as ações contidas no else, que normalmente é apenas imprimir 
+	uma mensagem de erro.
+	-O programa se encerra quando o usuario apertar um valor menor que 1 ou se apertar um valor maior que 10 (1 =< op <= 10).
